@@ -1,0 +1,21 @@
+{
+  "templates": [
+    {
+      "id": "salati",
+      "name": "جمعية صلاتي",
+      "subtitle": "العناية بالمساجد بربوع العين",
+      "mark": "صلاتي",
+      "mode": "image",
+      "logo": "assets/salati-logo.png?v=20260525",
+      "background": "assets/salati-eid-template.png?v=20260525",
+      "colors": {
+        "green": "#0F6B4B",
+        "gold": "#D4A73C",
+        "cream": "#F8F4EC"
+      },
+      "photo": { "x": 540, "y": 680, "r": 160 },
+      "nameBadge": { "y": 860, "h": 78, "minW": 410, "maxW": 780, "padX": 60 },
+      "description": "القالب الرسمي الهادئ لجمعية صلاتي، مطابق لهوية التصميم المرفق."
+    }
+  ]
+}

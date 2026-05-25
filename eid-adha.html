@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>منصة تهاني عيد الأضحى</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="eid-adha.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section id="templateScreen" class="template-screen" aria-label="اختيار قالب تهنئة عيد الأضحى">
+      <div class="screen-head">
+        <span class="platform-mark" aria-hidden="true">عيد</span>
+        <div>
+          <h1>منصة تهاني عيد الأضحى</h1>
+          <p>اختر قالب المؤسسة، ثم ارفع صورتك واكتب اسمك لتحصل على تصميم جاهز للنشر.</p>
+        </div>
+      </div>
+      <div id="templateGrid" class="template-grid"></div>
+    </section>
+
+    <section id="editorScreen" class="workspace is-hidden" aria-label="مصمم تهنئة عيد الأضحى">
+      <div class="preview-stage">
+        <div class="phone-frame" aria-label="معاينة التصميم النهائي">
+          <canvas id="posterCanvas" width="1080" height="1920"></canvas>
+        </div>
+      </div>
+
+      <aside class="control-panel">
+        <div class="brand-line">
+          <span id="brandMark" class="brand-mark" aria-hidden="true">عيد</span>
+          <div>
+            <h2 id="templateTitle">تهنئة عيد الأضحى</h2>
+            <p id="templateSubtitle">اختر القالب المناسب وابدأ التصميم.</p>
+          </div>
+        </div>
+
+        <button id="changeTemplateBtn" class="change-template" type="button">تغيير القالب</button>
+
+        <label id="dropZone" class="drop-zone" for="photoInput">
+          <input id="photoInput" type="file" accept="image/*">
+          <span class="upload-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img" focusable="false">
+              <path d="M12 16V5m0 0 4 4m-4-4-4 4M5 19h14" />
+            </svg>
+          </span>
+          <span class="upload-title">ارفع صورتك</span>
+          <span class="upload-subtitle">اسحب الصورة هنا أو اخترها من جهازك</span>
+        </label>
+
+        <div class="field-group">
+          <label for="nameInput">الاسم</label>
+          <div class="name-row">
+            <input id="nameInput" type="text" inputmode="text" maxlength="30" autocomplete="name" placeholder="اكتب الاسم هنا">
+            <span id="nameCount" aria-live="polite">0/30</span>
+          </div>
+        </div>
+
+        <div class="actions" aria-label="أزرار التحكم">
+          <button id="shareBtn" class="primary-action" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M18 8a3 3 0 1 0-2.83-4H15a3 3 0 0 0 .17 1L8.9 8.4A3 3 0 1 0 9 10.7l6.08 3.38A3 3 0 1 0 14 16.7L8.1 13.42" />
+            </svg>
+            حفظ التصميم
+          </button>
+          <button id="resetBtn" class="ghost-action" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M4 4v6h6M20 20v-6h-6M5 15a7 7 0 0 0 11.6 3M19 9A7 7 0 0 0 7.4 6" />
+            </svg>
+            إعادة تعيين
+          </button>
+        </div>
+
+        <div class="theme-row">
+          <span>الوضع الليلي</span>
+          <label class="switch" for="themeToggle">
+            <input id="themeToggle" type="checkbox">
+            <span></span>
+          </label>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="eid-adha.js"></script>
+</body>
+</html>
